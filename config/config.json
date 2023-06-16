@@ -1,0 +1,40 @@
+{
+  "development": {
+    "username": "logansanoh",
+    "password": "ltGWU5Z7BpjV", 
+    "database": "neondb",
+    "host": "ep-cool-glitter-064139.us-east-2.aws.neon.tech",
+    "dialect": "postgres",
+    "sslmode": "require",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    }
+  }, 
+  "development2": {
+    "username": "adm1234",
+    "password": "adm1234",
+    "database": "indice_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  }, 
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "logansanoh",
+    "password": "ltGWU5Z7BpjV", 
+    "database": "neondb",
+    "host": "ep-cool-glitter-064139.us-east-2.aws.neon.tech",
+    "dialect": "postgres",
+    "sslmode": "require",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    }
+  }
+}
