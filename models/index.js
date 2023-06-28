@@ -1,5 +1,5 @@
 'use strict';
-
+import * as pg from 'pg';
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
@@ -12,7 +12,7 @@ import Listing from './listing';
 
 let sequelize;
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  sequelize = new Sequelize(process.env[config.use_env_variable], {...config, dialectModule: pg});
 } else {
   sequelize = new Sequelize(
     config.database,
