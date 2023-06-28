@@ -362,7 +362,7 @@ const Dashboard = ({user}) => {
 								Designed by ❤️{" "}
 								<a
 									href="https://rapidstarttup.io/"
-									target="_blank"
+									target="_blank" rel="noreferrer"
 								>
 									RapidStartup
 								</a>
