@@ -15655,4 +15655,8 @@ Preloader Area CSS
 .mar-top-minus-20 {
   margin-top: -20px;
 }
+
+.listings-content .rating {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
