@@ -250,6 +250,7 @@
   }
   .banner-form-select {
     width: 100%;
+    text-align: end;
   }
   .main-banner-content {
     max-width: 100%;

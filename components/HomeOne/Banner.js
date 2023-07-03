@@ -93,7 +93,7 @@ const Banner = () => {
 						<label className="category-icon">
 						  <i className="flaticon-category"></i>
 						</label>
-						<select style="text-align:end;" className="banner-form-select">
+						<select className="banner-form-select">
 							<option>All Categories</option>
 							<option>Automotive Franchises</option>
 							<option>Business &amp; Professional</option>

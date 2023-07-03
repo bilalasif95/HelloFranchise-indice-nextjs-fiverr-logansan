@@ -4861,10 +4861,14 @@ Listings Widget Sidebar CSS
   cursor: pointer;
   border: 1px solid var(--bc, var(--border));
   background: var(--b, var(--background));
-  -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .listings-widget-area .widget_categories ul li input[type="checkbox"]:not(.switch) {
@@ -4988,10 +4992,14 @@ Listings Widget Sidebar CSS
   cursor: pointer;
   border: 1px solid var(--bc, var(--border));
   background: var(--b, var(--background));
-  -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .listings-widget-area .widget_features ul li input[type="checkbox"]:not(.switch) {
@@ -5115,10 +5123,14 @@ Listings Widget Sidebar CSS
   cursor: pointer;
   border: 1px solid var(--bc, var(--border));
   background: var(--b, var(--background));
-  -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ -webkit-box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s;
+  transition: background 0.3s, border-color 0.3s,
+ box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .listings-widget-area .widget_distance ul li input[type="checkbox"]:not(.switch) {
@@ -14243,7 +14255,8 @@ Dashboard CSS
 .add-listings-box .form-group .facilities-list li .checkbox input:checked + span:after {
   -webkit-transform: scale(0.4);
           transform: scale(0.4);
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease,
+ -webkit-transform 0.3s ease;
 }
 
 .add-listings-box .form-group .sidebar-widgets .box {
@@ -15194,6 +15207,7 @@ Dashboard CSS
 }
 
 .banner-form-select {
+  text-align: end;
   background: none;
   border: none;
   cursor: pointer;
