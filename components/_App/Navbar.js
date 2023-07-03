@@ -86,7 +86,7 @@ const Navbar = ({ userRole }) => {
               <div className='logo'>
                 <Link href='/'>
                   <a>
-                    <img src='/images/black-logo.png' alt='logo' />
+                    <img src='/images/logo.png' alt='logo' />
                   </a>
                 </Link>
               </div>
