@@ -99,7 +99,7 @@ const Navbar = ({ userRole }) => {
             <nav className='navbar navbar-expand-md navbar-light'>
               <Link href='/'>
                 <a className='navbar-brand'>
-                  <img src='/images/black-logo.png' alt='logo' />
+                  <img src='/images/logo.png' alt='logo' />
                 </a>
               </Link>
               <div className='collapse navbar-collapse mean-menu'>
