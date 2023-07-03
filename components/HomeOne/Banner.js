@@ -36,29 +36,29 @@ const Banner = () => {
 					  modules={[Autoplay]}
 					>
 					  <SwiperSlide>
-						Find Nearby <span className="color-0ec6c6">Hotel Franchises</span>
+						Launch Your New Business With A <span className="color-0ec6c6">Hotel Franchise</span>
 					  </SwiperSlide>
 	
 					  <SwiperSlide>
-						Find Nearby <span className="color-0ec6c6">Restaurant Franchises</span>
+					  Launch Your New Business With A <span className="color-0ec6c6">Restaurant Franchise</span>
 					  </SwiperSlide>
 	
 					  <SwiperSlide>
-						Find Nearby <span className="color-0ec6c6">Beauty Franchises</span>
+					  Launch Your New Business With A <span className="color-0ec6c6">Business Franchise</span>
 					  </SwiperSlide>
 	
 					  <SwiperSlide>
-						Find Nearby <span className="color-0ec6c6">Fitness Franchises</span>
+					  Launch Your New Business With A <span className="color-0ec6c6">Fitness Franchise</span>
 					  </SwiperSlide>
 					  
 					  <SwiperSlide>
-						Find Nearby <span className="color-0ec6c6">Other Franchises</span>
+					  Launch Your New Business With A <span className="color-0ec6c6">Other Franchise</span>
 					  </SwiperSlide>
 					</Swiper>
 				  </h1>
 				</div>
 	
-				<p>Expolore top-rated Franchises, Business Opportunities, and more...</p>
+				<p>Find a proven business model that offers the support you need to reach your goals</p>
 	
 				<form>
 				  <div className="row m-0 align-items-center">
@@ -93,7 +93,7 @@ const Banner = () => {
 						<label className="category-icon">
 						  <i className="flaticon-category"></i>
 						</label>
-						<select className="banner-form-select">
+						<select style="text-align:end;" className="banner-form-select">
 							<option>All Categories</option>
 							<option>Automotive Franchises</option>
 							<option>Business &amp; Professional</option>
@@ -129,17 +129,17 @@ const Banner = () => {
 				</form>
 	
 				<ul className="popular-search-list">
-				  <li>Popular:</li>
+				  <li>Need Help? </li>
 				  <li>
 					<Link href="/grid-listings-with-map">
-					  <a>Restaurants</a>
+					  <a>Discover which type of franchise best fits you here</a>
 					</Link>
 				  </li>
-				  <li>
+				  {/*<li>
 					<Link href="/grid-listings-with-map">
 					  <a>Events</a>
 					</Link>
-				  </li>
+					</li>
 				  <li>
 					<Link href="/grid-listings-with-map">
 					  <a>Clothing</a>
@@ -159,7 +159,7 @@ const Banner = () => {
 					<Link href="/grid-listings-with-map">
 					  <a>Bookstore</a>
 					</Link>
-				  </li>
+					</li>*/}
 				</ul>
 			  </div>
 			</div>

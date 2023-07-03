@@ -34,25 +34,25 @@ const Index = ({ user, listings }) => {
 				/>
 			)}
 
-			<DestinationsOne 
+			{/*<DestinationsOne 
 				titleOne={true} 
 				paddingBottom70="pb-70" 
-			/>
+			/>*/}
 
 			<Feedback 
 				title={true} 
 				bgImage="bg-image" 
 			/>
 
-			<EventsArea />
+			{/*<EventsArea />*/}
 
 			<HowItWorks 
 				bgColor="bg-f9f9f9" 
 			/>
 
-			<Blog />
+			{/*<Blog />*/}
 
-			<AppDownload />
+			{/*<AppDownload />*/}
 
 			<Footer />
 		</>

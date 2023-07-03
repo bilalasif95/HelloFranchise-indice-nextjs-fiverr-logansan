@@ -19,13 +19,6 @@ const Footer = ({ bgColor }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href='/blog'>
-                      <a>
-                        <i className='flaticon-left-chevron'></i> Recent News
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
                     <Link href='/testimonial'>
                       <a>
                         <i className='flaticon-left-chevron'></i> Investor
@@ -70,7 +63,7 @@ const Footer = ({ bgColor }) => {
                       </a>
                     </Link>
                   </li>
-                  <li>
+                  {/*<li>
                     <Link href='/events'>
                       <a>
                         <i className='flaticon-left-chevron'></i> Events
@@ -83,7 +76,7 @@ const Footer = ({ bgColor }) => {
                         <i className='flaticon-left-chevron'></i> Events Details
                       </a>
                     </Link>
-                  </li>
+                  </li>*/}
                   <li>
                     <Link href='/contact'>
                       <a>
@@ -99,13 +92,13 @@ const Footer = ({ bgColor }) => {
                       </a>
                     </Link>
                   </li>
-                  <li>
+                  {/*<li>
                     <Link href='/blog'>
                       <a>
                         <i className='flaticon-left-chevron'></i> Our Blog
                       </a>
                     </Link>
-                  </li>
+                  </li>*/}
                 </ul>
               </div>
             </div>
@@ -115,13 +108,6 @@ const Footer = ({ bgColor }) => {
                 <h3>Business With HelloDranchise</h3>
 
                 <ul className='link-list'>
-                  <li>
-                    <Link href='/about'>
-                      <a>
-                        <i className='flaticon-left-chevron'></i> About Us
-                      </a>
-                    </Link>
-                  </li>
                   <li>
                     <Link href='/testimonial'>
                       <a>
@@ -137,24 +123,9 @@ const Footer = ({ bgColor }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href='/listings'>
-                      <a>
-                        <i className='flaticon-left-chevron'></i> Business
-                        Support
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
                     <Link href='/contact'>
                       <a>
                         <i className='flaticon-left-chevron'></i> Contact
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='/privacy-policy'>
-                      <a>
-                        <i className='flaticon-left-chevron'></i> Privacy Policy
                       </a>
                     </Link>
                   </li>

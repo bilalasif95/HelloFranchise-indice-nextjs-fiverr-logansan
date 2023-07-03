@@ -138,7 +138,7 @@ const Navbar = ({ userRole }) => {
                     </Link>
                   </li>
    
-                  <li className='nav-item'>
+                  {/*<li className='nav-item'>
                     <a href='#' className='dropdown-toggle nav-link'>
                       Pages
                     </a>
@@ -216,7 +216,7 @@ const Navbar = ({ userRole }) => {
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li>*/}
 
                   <li className='nav-item'>
                     <Link href='/contact' activeClassName='active'>

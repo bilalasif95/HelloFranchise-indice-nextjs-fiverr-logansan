@@ -10,9 +10,7 @@ const Category = ({ titleOne, titleTwo }) => {
             <div className='section-title'>
               <h2>Popular Categories</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravida. Risus commodo viverra.
+                Finding a franchise for you can be as easy as sorting through our categories, or you can take our online quiz and find the right franchise to suit you.
               </p>
             </div>
           ) : titleTwo ? (
@@ -32,7 +30,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-cooking'></i>
                 </div>
-                <h3>Restaurant</h3>
+                <h3>Food</h3>
                 <span>16 Places</span>
                 <Link href='/listings/?title=&location=&category=Restaurants'>
                   <a className='link-btn'></a>
@@ -71,7 +69,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-commerce'></i>
                 </div>
-                <h3>Shopping</h3>
+                <h3>Business</h3>
                 <span>24 Places</span>
                 <Link href='/listings/?title=&location=&category=Shopping'>
                   <a className='link-btn'></a>
@@ -84,9 +82,9 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-cleansing'></i>
                 </div>
-                <h3>Beauty & Spa</h3>
+                <h3>HGealth & Beauty</h3>
                 <span>8 Places</span>
-                <Link href='/listings/?title=&location=&category=Beauty'>
+                <Link href='/listings/?title=&location=&category=Health-&-Beauty'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -97,9 +95,9 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-calendar'></i>
                 </div>
-                <h3>Events</h3>
+                <h3>Education</h3>
                 <span>12 Places</span>
-                <Link href='/listings/?title=&location=&category=Events'>
+                <Link href='/listings/?title=&location=&category=education-franchises'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -112,7 +110,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 </div>
                 <h3>Health Care</h3>
                 <span>16 Places</span>
-                <Link href='/listings/?title=&location=&category=Health'>
+                <Link href='/listings/?title=&location=&category=Health-care-franchises'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -125,7 +123,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 </div>
                 <h3>Travel & Public</h3>
                 <span>8 Places</span>
-                <Link href='/listings/?title=&location=&category=Travel'>
+                <Link href='/listings/?title=&location=&category=travel-&-leasure'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -136,9 +134,9 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-car-insurance'></i>
                 </div>
-                <h3>Auto Insurance</h3>
+                <h3>Automotive</h3>
                 <span>10 Places</span>
-                <Link href='/listings/?title=&location=&category=Insurence'>
+                <Link href='/listings/?title=&location=&category=automotive-franchises'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -149,9 +147,9 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-attorney'></i>
                 </div>
-                <h3>Attorneys</h3>
+                <h3>Business Professionals</h3>
                 <span>25 Places</span>
-                <Link href='/listings/?title=&location=&category=Attorneys'>
+                <Link href='/listings/?title=&location=&category=business-&-professionals'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
@@ -162,9 +160,9 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-plumber'></i>
                 </div>
-                <h3>Plumbers</h3>
+                <h3>Home Services</h3>
                 <span>5 Places</span>
-                <Link href='/listings/?title=&location=&category=Plumbers'>
+                <Link href='/listings/?title=&location=&category=home-based-franchises'>
                   <a className='link-btn'></a>
                 </Link>
               </div>
