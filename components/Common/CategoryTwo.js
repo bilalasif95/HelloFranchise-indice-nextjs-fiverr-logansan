@@ -82,7 +82,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-cleansing'></i>
                 </div>
-                <h3>HGealth & Beauty</h3>
+                <h3>Health & Beauty</h3>
                 <span>8 Places</span>
                 <Link href='/listings/?title=&location=&category=Health-&-Beauty'>
                   <a className='link-btn'></a>
@@ -121,7 +121,7 @@ const Category = ({ titleOne, titleTwo }) => {
                 <div className='icon'>
                   <i className='flaticon-airport'></i>
                 </div>
-                <h3>Travel & Public</h3>
+                <h3>Travel</h3>
                 <span>8 Places</span>
                 <Link href='/listings/?title=&location=&category=travel-&-leasure'>
                   <a className='link-btn'></a>
