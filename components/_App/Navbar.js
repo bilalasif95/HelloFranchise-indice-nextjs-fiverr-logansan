@@ -10,6 +10,7 @@ import { handleLogout } from '../../utils/auth';
 // component
 import AuthModal from '../Authentication/AuthModal';
 import MiniAuth from '../Authentication/MiniAuth';
+import { useTranslation } from "next-i18next";
 
 const Navbar = ({ userRole }) => {
   const { toggleAuthModal, displayAuthModal } = useContext(IndiceContext);
@@ -64,6 +65,7 @@ const Navbar = ({ userRole }) => {
       router.push('/');
     }
   };
+  const { t } = useTranslation("common");
   return (
     <>
       <div
@@ -122,19 +124,19 @@ const Navbar = ({ userRole }) => {
                 <ul className='navbar-nav'>
                   <li className='nav-item'>
                     <Link href='/' activeClassName='active'>
-                      <a className='nav-link'>Home</a>
+                      <a className='nav-link'>{t('Home')}</a>
                     </Link>
                   </li>
 
                   <li className='nav-item'>
                     <Link href='/listings' activeClassName='active'>
-                      <a className='nav-link'>Listings</a>
+                      <a className='nav-link'>{t('Listings')}</a>
                     </Link>
                   </li>
 
                   <li className='nav-item'>
                     <Link href='/about' activeClassName='active'>
-                      <a className='nav-link'>About Us</a>
+                      <a className='nav-link'>{t('About Us')}</a>
                     </Link>
                   </li>
    
@@ -220,7 +222,7 @@ const Navbar = ({ userRole }) => {
 
                   <li className='nav-item'>
                     <Link href='/contact' activeClassName='active'>
-                      <a className='nav-link'>Contact</a>
+                      <a className='nav-link'>{t('Contact')}</a>
                     </Link>
                   </li>
 
