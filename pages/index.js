@@ -12,6 +12,7 @@ import HowItWorks from "../components/Common/HowItWorks";
 import Blog from "../components/HomeOne/Blog";
 import AppDownload from "../components/Common/AppDownload";
 import Footer from "../components/_App/Footer";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Index = ({ user, listings }) => {
 	return (
@@ -59,7 +60,7 @@ const Index = ({ user, listings }) => {
 	);
 };
 
-export async function getServerSideProps({ query }) {
+export async function getServerSideProps({ query, locale }) {
 	const page = query.page ? query.page : "1";
 	const keyword = query.keyword;
 
@@ -75,6 +76,7 @@ export async function getServerSideProps({ query }) {
 
 	return {
 		props: {
+			...(await serverSideTranslations(locale, ['common'])),
 			listings: response.data.listings,
 			totalPages: response.data.totalPages,
 		},

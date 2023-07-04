@@ -1,6 +1,15 @@
 import Link from 'next/link';
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 const Footer = ({ bgColor }) => {
+  const Router = useRouter();
+  const { t } = useTranslation("common");
+
+  const onLanguageChange = (language) => {
+    Router.push(Router.pathname, Router.asPath, { locale: language });
+  };
+
   return (
     <>
       <footer className={`footer-area ${bgColor}`}>
@@ -8,7 +17,7 @@ const Footer = ({ bgColor }) => {
           <div className='row'>
             <div className='col-lg-3 col-sm-6 col-md-6'>
               <div className='single-footer-widget'>
-                <h3>About</h3>
+                <h3>{t('About')}</h3>
 
                 <ul className='link-list'>
                   <li>
@@ -137,9 +146,12 @@ const Footer = ({ bgColor }) => {
               <div className='single-footer-widget'>
                 <h3>Languages</h3>
                 <div className='languages-switch'>
-                  <select>
-                    <option>English</option>
-                    <option>Dutch</option>
+                  <select
+                    defaultValue={Router.locale}
+                    onChange={(e) => onLanguageChange(e.target.value)}
+                  >
+                    <option value="en">English</option>
+                    <option value="nl">Dutch</option>
                   </select>
                 </div>
 

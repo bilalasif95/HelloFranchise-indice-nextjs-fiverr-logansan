@@ -21,6 +21,28 @@ import { redirectUser } from '../utils/auth';
 import baseUrl from '../utils/baseUrl';
 import axios from 'axios';
 
+import { appWithTranslation } from "next-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import en from "../public/locales/en/common.json";
+import nl from "../public/locales/nl/common.json";
+
+// set up i18next instance
+i18n
+  .use(initReactI18next)
+  .init({
+    lng: 'en', // default language
+    fallbackLng: 'en', // fallback language
+    resources: {
+      en: {
+        translation: en
+      },
+      nl: {
+        translation: nl
+      }
+    }
+  });
+
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
  
@@ -94,4 +116,4 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
 };
 
 
-export default MyApp;
+export default appWithTranslation(MyApp);
