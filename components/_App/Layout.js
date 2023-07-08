@@ -21,11 +21,15 @@ const Layout = ({ children }) => {
         />
         <title>HelloFranchise - Directory & Listing Of The Worlds Most Successful Franchises</title>
         <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-        <script>
-          Weglot.initialize({
-            api_key: 'wg_a80c0ace692c50a2b2367b9a32b6c61d0'
-          });
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              Weglot.initialize({
+                api_key: 'wg_a80c0ace692c50a2b2367b9a32b6c61d0'
+              });
+            `,
+          }}
+        />
       </Head>
 
       {children}
