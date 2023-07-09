@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/_App/Navbar';
 import baseUrl from '../../utils/baseUrl';
 import Footer from '../../components/_App/Footer';
+import { IndiceContext } from '../../contexts';
+import ClaimModal from '../../components/Listings/ClaimModal';
 import StickyBox from "react-sticky-box";
 
 const SingleListings = ({ user, listing, images }) => {
+  const { toggleAuthModal, displayAuthModal } = useContext(IndiceContext);
+  const { toggleClaimModal, displayClaimModal } = useContext(IndiceContext);
+
   return (
     <>
       <Navbar 
         userRole={user} 
       />
-
+      <div
+        className={
+          displayAuthModal || displayClaimModal
+            ? 'body_overlay open'
+            : 'body_overlay'
+        }
+      ></div>
       <section className='listings-details-area pb-70'>
         <div className='listings-details-image'>
           <img src='/images/listings-details.jpg' alt='image' />
@@ -566,10 +577,33 @@ const SingleListings = ({ user, listing, images }) => {
                     <a href='#' className='default-btn'>
                       Book Now
                     </a>
+                    <span></span>
+                    <a
+                      data-toggle='modal'
+                      href='#'
+                      className={'default-btn'}
+                      onClick={
+                        user &&
+                        user?.role &&
+                        (user?.role === 'user' || user.role === 'admin')
+                          ? toggleClaimModal
+                          : toggleAuthModal
+                      }
+                    >
+                      Claim Your Listing
+                    </a>
+
                     <span>
                       By <a href='#'>Booking.com</a>
                     </span>
                   </div>
+
+                  {/* <div className='listings-widget book_listings'>
+                    <h3>Claim Your Listing</h3>
+                    <a href='#' className='default-btn'>
+                      Claim
+                    </a>
+                  </div> */}
 
                   <div className='listings-widget listings_contact_details'>
                     <h3>Contact Details</h3>
@@ -642,6 +676,7 @@ const SingleListings = ({ user, listing, images }) => {
       <Footer 
         bgColor='bg-f5f5f5' 
       />
+      <ClaimModal user={user} list={listing}/>
     </>
   );
 };
