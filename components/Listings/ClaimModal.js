@@ -13,7 +13,7 @@ const INITIAL_CLAIM = {
   businessName: "",
   key: "",
 };
-const ClaimModal = ({user, list}) => {
+const ClaimModal = ({user, list, claimResponse, setClaimResponse}) => {
   //context value
   const { displayClaimModal, toggleClaimModal } = useContext(IndiceContext);
   
@@ -22,7 +22,6 @@ const ClaimModal = ({user, list}) => {
   const [loading, setLoading] = useState(false);
   const [display, setDisplay] = useState(false);
   const [claimError, setClaimError] = useState("");
-  const [claimResponse, setClaimResponse] = useState(false);
   
   const onDismiss = () => setClaimError('');
   const { token } = parseCookies();
@@ -47,7 +46,6 @@ const ClaimModal = ({user, list}) => {
 
       setClaim(INITIAL_CLAIM);
       window.setTimeout(() => {
-        setClaimResponse("");
         toggleClaimModal();
       }, 3000);
     } catch (error) {

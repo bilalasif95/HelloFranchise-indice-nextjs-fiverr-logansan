@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/_App/Navbar';
 import baseUrl from '../../utils/baseUrl';
@@ -8,6 +8,8 @@ import ClaimModal from '../../components/Listings/ClaimModal';
 import StickyBox from "react-sticky-box";
 
 const SingleListings = ({ user, listing, images }) => {
+  const [claimResponse, setClaimResponse] = useState("");
+
   const { toggleAuthModal, displayAuthModal } = useContext(IndiceContext);
   const { toggleClaimModal, displayClaimModal } = useContext(IndiceContext);
 
@@ -577,13 +579,13 @@ const SingleListings = ({ user, listing, images }) => {
                     <a href='#' className='default-btn'>
                       Book Now
                     </a>
-                    <span></span>
-                    <a
+                    {
+                      user.id != listing.userId && claimResponse == "" ? <><span></span> <a
                       data-toggle='modal'
                       href='#'
                       className={'default-btn'}
                       onClick={
-                        user &&
+                        user?.role && 
                         user?.role &&
                         (user?.role === 'user' || user.role === 'admin')
                           ? toggleClaimModal
@@ -591,7 +593,8 @@ const SingleListings = ({ user, listing, images }) => {
                       }
                     >
                       Claim Your Listing
-                    </a>
+                    </a></> : <></>
+                    }
 
                     <span>
                       By <a href='#'>Booking.com</a>
@@ -676,7 +679,7 @@ const SingleListings = ({ user, listing, images }) => {
       <Footer 
         bgColor='bg-f5f5f5' 
       />
-      <ClaimModal user={user} list={listing}/>
+      <ClaimModal user={user} list={listing} claimResponse={claimResponse}  setClaimResponse={setClaimResponse}/>
     </>
   );
 };
