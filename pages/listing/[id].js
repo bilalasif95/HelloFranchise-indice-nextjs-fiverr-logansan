@@ -580,7 +580,7 @@ const SingleListings = ({ user, listing, images }) => {
                       Book Now
                     </a>
                     {
-                      user.id != listing.userId && claimResponse == "" ? <><span></span> <a
+                      user?.id != listing?.userId && claimResponse == "" ? <><span></span> <a
                       data-toggle='modal'
                       href='#'
                       className={'default-btn'}
