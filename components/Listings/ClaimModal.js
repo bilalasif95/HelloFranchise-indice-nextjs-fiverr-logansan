@@ -105,7 +105,7 @@ const ClaimModal = ({user, list, claimResponse, setClaimResponse}) => {
                       )}
                       <form onSubmit={handleSubmit}>
                         <div className="row">
-                          <div className="col-lg-12 col-md-6 col-sm-6">
+                          {/* <div className="col-lg-12 col-md-6 col-sm-6">
                             <div className="form-group">
                               <label>Your Full Name</label>
                               <input
@@ -117,9 +117,9 @@ const ClaimModal = ({user, list, claimResponse, setClaimResponse}) => {
                                 onChange={handleChange}
                               />
                             </div>
-                          </div>
+                          </div> */}
 
-                          <div className="col-lg-12 col-md-6 col-sm-6">
+                          {/* <div className="col-lg-12 col-md-6 col-sm-6">
                             <div className="form-group">
                               <label>Your Email Adress</label>
                               <input
@@ -131,9 +131,9 @@ const ClaimModal = ({user, list, claimResponse, setClaimResponse}) => {
                                 onChange={handleChange}
                               />
                             </div>
-                          </div>
+                          </div> */}
 
-                          <div className="col-lg-12 col-md-6 col-sm-6">
+                          {/* <div className="col-lg-12 col-md-6 col-sm-6">
                             <div className="form-group">
                               <label>Your Business Name</label>
                               <input
@@ -145,7 +145,7 @@ const ClaimModal = ({user, list, claimResponse, setClaimResponse}) => {
                                 onChange={handleChange}
                               />
                             </div>
-                          </div>
+                          </div> */}
 
                           <div className="col-lg-12 col-md-6 col-sm-6">
                             <div className="form-group">
