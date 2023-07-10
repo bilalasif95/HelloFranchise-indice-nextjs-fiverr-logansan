@@ -4,7 +4,7 @@ import Router from 'next/router'
 export const handleLogin = (token) => {
     cookie.set('token', token);
     if(window.location.href.includes("listing/")){
-        Router.push(window.location.href)
+        location.reload()
     } else {
         Router.push('/')
     }
