@@ -22,6 +22,13 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {/* Add the JavaScript snippet here */}
+          <script
+            id="__chat-rapidagent-Sdk__"
+            src="https://widget-chat.rapidagent.ai/chat-rapidagent-sdk-v1.0.js"
+            chatbotId="64d4afaeb721173c2e7679d1"
+            widgetUrl="https://widget-chat.rapidagent.ai/"
+          ></script>
         </body>
       </Html>
     )
