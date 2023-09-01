@@ -15,8 +15,8 @@ const SingleListings = ({ user, listing, images }) => {
 
   return (
     <>
-      <Navbar 
-        userRole={user} 
+      <Navbar
+        userRole={user}
       />
       <div
         className={
@@ -27,7 +27,7 @@ const SingleListings = ({ user, listing, images }) => {
       ></div>
       <section className='listings-details-area pb-70'>
         <div className='listings-details-image'>
-          <img src='/images/listings-details.jpg' alt='image' />
+          <img src='/images/listings-details.jpg' alt='image' style={{width:"100%"}} />
 
           <div className='container'>
             <div className='container'>
@@ -64,16 +64,16 @@ const SingleListings = ({ user, listing, images }) => {
             </div>
           </div>
         </div>
- 
+
         <div className='container'>
           <div className='row'>
             <div className='col-lg-8 col-md-12'>
               <div className='listings-details-desc'>
-                <div 
+                <div
                   className='listings_details_content'
-                  dangerouslySetInnerHTML={{ __html: listing.description}} 
+                  dangerouslySetInnerHTML={{ __html: listing.description}}
                 />
-   
+
                 <div id='review'>
                   <div className='listings-review-comments'>
                     <div className='user-review'>
@@ -585,7 +585,7 @@ const SingleListings = ({ user, listing, images }) => {
                       href='#'
                       className={'default-btn'}
                       onClick={
-                        user?.role && 
+                        user?.role &&
                         user?.role &&
                         (user?.role === 'user' || user.role === 'admin')
                           ? toggleClaimModal
@@ -625,7 +625,7 @@ const SingleListings = ({ user, listing, images }) => {
                         <i className='bx bx-globe'></i>
                         <a href={`${listing.website}`}>{listing.website}</a>
                       </li>
-                      
+
                       <li>
                         <i className='bx bx-map'></i> {listing.address}
                       </li>
@@ -637,9 +637,9 @@ const SingleListings = ({ user, listing, images }) => {
                     <ul>
                       <li>
                         <i className='bx bxl-facebook'></i>
-                        <a 
-                          href={`${listing.facebook}`} 
-                          target="_blank" 
+                        <a
+                          href={`${listing.facebook}`}
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.facebook}
@@ -648,9 +648,9 @@ const SingleListings = ({ user, listing, images }) => {
 
                       <li>
                         <i className='bx bxl-twitter'></i>
-                        <a 
+                        <a
                           href={`${listing.twitter}`}
-                          target="_blank" 
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.twitter}
@@ -659,9 +659,9 @@ const SingleListings = ({ user, listing, images }) => {
 
                       <li>
                         <i className='bx bxl-linkedin'></i>
-                        <a 
+                        <a
                           href={`${listing.linkedin}`}
-                          target="_blank" 
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.linkedin}
@@ -676,8 +676,8 @@ const SingleListings = ({ user, listing, images }) => {
         </div>
       </section>
 
-      <Footer 
-        bgColor='bg-f5f5f5' 
+      <Footer
+        bgColor='bg-f5f5f5'
       />
       <ClaimModal user={user} list={listing} claimResponse={claimResponse}  setClaimResponse={setClaimResponse}/>
     </>
