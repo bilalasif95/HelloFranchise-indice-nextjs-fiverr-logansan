@@ -34,22 +34,27 @@ const Banner = () => {
                     <SwiperSlide>
                       Find Nearby <span className="color-0ec6c6">Fitness Franchises</span>
                     </SwiperSlide>
-                    
+
                     <SwiperSlide>
                       Find Nearby <span className="color-0ec6c6">Shopping Franchises</span>
                     </SwiperSlide>
                   </Swiper>
                 </h1>
-                
+
                 <p>Expolore top-rated Franchises, Business Opportunities, and more...</p>
 
                 <form>
                   <div className='row m-0 align-items-center'>
                     <div className='col-lg-4 col-md-12 p-0'>
                       <div className='form-group'>
-                        <label>
-                          <i className='flaticon-search'></i>
-                        </label>
+                      <label onClick={
+                    handleSearch
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
+                  </label>
                         <input
                           type='text'
                           className='form-control'

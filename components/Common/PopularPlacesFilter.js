@@ -28,8 +28,13 @@ const PopularPlacesFilter = () => {
             <div className='row m-0 align-items-center'>
               <div className='col-lg-4 col-md-12 p-0'>
                 <div className='form-group'>
-                  <label>
-                    <i className='flaticon-search'></i>
+                <label onClick={
+                    submitHandler
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
                   </label>
                   <input
                     type='text'

@@ -109,8 +109,13 @@ const Navbar = ({ userRole }) => {
                   className='navbar-search-box search-box-one'
                   onSubmit={handleSearch}
                 >
-                  <label>
-                    <i className='flaticon-search'></i>
+                  <label onClick={
+                    handleSearch
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
                   </label>
                   <input
                     type='text'
@@ -139,7 +144,7 @@ const Navbar = ({ userRole }) => {
                       <a className='nav-link'>{t('About Us')}</a>
                     </Link>
                   </li>
-   
+
                   {/*<li className='nav-item'>
                     <a href='#' className='dropdown-toggle nav-link'>
                       Pages
