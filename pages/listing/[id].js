@@ -39,7 +39,7 @@ const SingleListings = ({ user, listing, images }) => {
 
                 <h3>{listing.listingTitle}</h3>
 
-                <h2>${listing.pricing}</h2>
+
 
                 <ul className='d-flex align-items-center'>
                   <li className='phone-number'>
@@ -51,7 +51,7 @@ const SingleListings = ({ user, listing, images }) => {
                   <li className='time'>
                     <i className='bx bx-time-five'></i>
                     <span>Currently Open</span>
-                    {listing.openingTime} - {listing.closingTime}
+                    ${listing.pricing}
                   </li>
 
                   <li className='location'>
