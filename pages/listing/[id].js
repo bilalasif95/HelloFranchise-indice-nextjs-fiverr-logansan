@@ -50,7 +50,7 @@ const SingleListings = ({ user, listing, images }) => {
 
                   <li className='time'>
                     <i className='bx bx-time-five'></i>
-                    <span>Currently Open</span>
+                    <span>Required Capital</span>
                     ${listing.pricing}
                   </li>
 
