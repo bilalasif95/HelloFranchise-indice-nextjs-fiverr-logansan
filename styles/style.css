@@ -122,12 +122,17 @@ a:hover {
   margin-bottom: 40px;
 }
 
-
+.icon-image {
+  width: 1em;  /* Adjust as needed */
+  height: 1em; /* Adjust as needed */
+  vertical-align: middle;
+}
 
 .d-table {
   width: 100%;
   height: 100%;
 }
+
 /* Your CSS */
 .custom-cursor {
   cursor: pointer;

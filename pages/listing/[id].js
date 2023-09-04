@@ -49,10 +49,11 @@ const SingleListings = ({ user, listing, images }) => {
                   </li>
 
                   <li className='time'>
-                    <i className='bx bx-time-five'></i>
-                    <span>Required Capital</span>
-                    ${listing.pricing}
-                  </li>
+  <i className='bx bx-dollar-circle'></i>
+  <span>Required Capital</span>
+  ${listing.pricing}
+</li>
+
 
                   <li className='location'>
                     <i className='bx bx-map'></i>

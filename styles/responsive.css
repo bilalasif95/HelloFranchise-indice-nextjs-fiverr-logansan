@@ -3228,7 +3228,7 @@
   .listings-details-image img {
     -o-object-fit: cover;
        object-fit: cover;
-    min-height: 300px;
+
   }
   .listings-details-image .listings-details-content {
     padding-bottom: 20px;

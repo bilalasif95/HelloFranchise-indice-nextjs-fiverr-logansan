@@ -17,14 +17,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Index = ({ user, listings }) => {
 	return (
 		<>
-			<Navbar 
-				userRole={user} 
-			/> 
+			<Navbar
+				userRole={user}
+			/>
 
 			<Banner />
 
-			<CategoryTwo 
-				titleOne={true} 
+			<CategoryTwo
+				titleOne={true}
 			/>
 
 			{listings && (
@@ -35,20 +35,20 @@ const Index = ({ user, listings }) => {
 				/>
 			)}
 
-			{/*<DestinationsOne 
-				titleOne={true} 
-				paddingBottom70="pb-70" 
+			{/*<DestinationsOne
+				titleOne={true}
+				paddingBottom70="pb-70"
 			/>*/}
 
-			<Feedback 
-				title={true} 
-				bgImage="bg-image" 
+			<Feedback
+				title={true}
+				bgImage="bg-image"
 			/>
 
 			{/*<EventsArea />*/}
 
-			<HowItWorks 
-				bgColor="bg-f9f9f9" 
+			<HowItWorks
+				bgColor="bg-f9f9f9"
 			/>
 
 			{/*<Blog />*/}
