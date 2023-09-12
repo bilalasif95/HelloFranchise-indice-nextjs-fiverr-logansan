@@ -253,7 +253,6 @@ const Wallet = ({user}) => {
 									href="https://rapidstartup.io/"
 									target="_blank"
 									rel="noreferrer"
-									rel="noreferrer"
 								>
 									Rapidstartup
 								</a>

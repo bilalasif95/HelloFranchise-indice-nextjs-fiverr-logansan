@@ -9,8 +9,7 @@ const ContactForm = () => {
           <div className='section-title'>
             <h2>Ready to Get Started?</h2>
             <p>
-              Your email address will not be published. Required fields are
-              marked *
+              {"Your email address will not be published."} {"Required fields are marked"} *
             </p>
           </div>
 

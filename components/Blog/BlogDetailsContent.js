@@ -454,7 +454,7 @@ const BlogDetailsContent = () => {
                         <input
                           type='text'
                           id='author'
-                          placeholder='Your Name*'
+                          placeholder={`${'Your Name'}*`}
                           name='author'
                           required='required'
                         />
