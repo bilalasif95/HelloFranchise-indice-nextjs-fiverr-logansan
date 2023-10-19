@@ -53,7 +53,6 @@ const createListings = async (req, res) => {
 		);
 
 
-
 		await Listing.create({
 			userId,
 			listingTitle,
