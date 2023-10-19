@@ -52,11 +52,7 @@ const createListings = async (req, res) => {
 			process.env.JWT_SECRET
 		);
 
-		if (!isLength(listingTitle, { min: 3 })) {
-			return res
-				.status(422)
-				.send("The title should be a minimum of Three characters long");
-		}
+
 
 		await Listing.create({
 			userId,
