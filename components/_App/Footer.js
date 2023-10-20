@@ -144,7 +144,7 @@ const Footer = ({ bgColor }) => {
 
             <div className='col-lg-3 col-sm-6 col-md-6'>
               <div className='single-footer-widget'>
-                <h3>Languages</h3>
+                {/*<h3>Languages</h3>
                 <div className='languages-switch'>
                   <select
                     defaultValue={Router.locale}
@@ -153,7 +153,7 @@ const Footer = ({ bgColor }) => {
                     <option value="en">English</option>
                     <option value="nl">Dutch</option>
                   </select>
-                </div>
+                </div>*/}
 
                 <h3>Countries</h3>
                 <div className='country-switch'>
@@ -170,7 +170,7 @@ const Footer = ({ bgColor }) => {
           <div className='copyright-area'>
             <p>
               Copyright <span>HelloFranchise</span> is Proudly Crafted by{' '}
-              <a href='https://rapidstartup.io/' target='_blank' rel='noreferrer'>
+              <a href='https://rapidagent.ai' target='_blank' rel='noreferrer'>
                 RapidStartup
               </a>
             </p>
