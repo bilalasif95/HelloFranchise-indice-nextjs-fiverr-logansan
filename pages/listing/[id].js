@@ -580,6 +580,7 @@ const SingleListings = ({ user, listing, images }) => {
                     <a href='#' className='default-btn'>
                       Request Information Package
                     </a>
+                    <span></span>
                     <a href='#' className='default-btn'>
                     <i className='bx bx-map' ></i>
                       Request Region Check
