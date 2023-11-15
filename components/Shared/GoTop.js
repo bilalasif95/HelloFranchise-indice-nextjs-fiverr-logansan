@@ -26,8 +26,8 @@ const GoTop = () => {
 
   return (
     <>
-      {isVisible && (
-        <div className='go-top active' onClick={() => scrollToTop()}>
+      {isVisible &&  (
+        <div style={{marginBottom:"140px"}} className='go-top active' onClick={() => scrollToTop()}>
           <i className='bx bx-up-arrow-alt'></i>
         </div>
       )}

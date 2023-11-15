@@ -15,9 +15,14 @@ const MiniAuth = ({
           <div className='others-option'>
             <div className='option-item'>
               <form className='navbar-search-box' onSubmit={handleSearch}>
-                <label>
-                  <i className='flaticon-search'></i>
-                </label>
+              <label onClick={
+                    handleSearch
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
+                  </label>
                 <input
                   type='text'
                   className='input-search'

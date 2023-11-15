@@ -5,8 +5,9 @@ const IndiceContext = createContext();
 const IndiceProvider = ({ children }) => {
   const [displaySideMenu, setDisplaySideMenu] = useState(false);
   const [displayAuthModal, setDisplayAuthModal] = useState(false);
-  const [activeListing, setActiveListing] = useState('');
-  const [pendingListing, setPendingListing] = useState('');
+  const [displayClaimModal, setDisplayClaimModal] = useState(false);
+  const [activeListing, setActiveListing] = useState("");
+  const [pendingListing, setPendingListing] = useState("");
 
   const toggleSideMenu = () => {
     setDisplaySideMenu(!displaySideMenu);
@@ -16,6 +17,9 @@ const IndiceProvider = ({ children }) => {
     setDisplayAuthModal(!displayAuthModal);
   };
 
+  const toggleClaimModal = () => {
+    setDisplayClaimModal(!displayClaimModal);
+  };
 
   return (
     <IndiceContext.Provider
@@ -24,10 +28,12 @@ const IndiceProvider = ({ children }) => {
         toggleSideMenu,
         displayAuthModal,
         toggleAuthModal,
+        displayClaimModal,
+        toggleClaimModal,
         activeListing,
         setActiveListing,
         pendingListing,
-        setPendingListing
+        setPendingListing,
       }}
     >
       {children}

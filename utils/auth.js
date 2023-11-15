@@ -3,7 +3,11 @@ import Router from 'next/router'
 
 export const handleLogin = (token) => {
     cookie.set('token', token);
-    Router.push('/')
+    if(window.location.href.includes("listing/")){
+        location.reload()
+    } else {
+        Router.push('/')
+    }
 }
 
 export const redirectUser = (ctx, location) => {

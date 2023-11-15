@@ -107,9 +107,35 @@ a:hover {
   outline: 0 !important;
 }
 
+
+.webwhiz-widget {
+  position: fixed;
+  z-index: 9999999;
+  max-height: calc(100% - 30px);
+  right: 20px;
+  bottom: 20px;
+  min-width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+  width: 80px;
+  max-width: calc(100% - 40px);
+  margin-bottom: 40px;
+}
+
+.icon-image {
+  width: 1em;  /* Adjust as needed */
+  height: 1em; /* Adjust as needed */
+  vertical-align: middle;
+}
+
 .d-table {
   width: 100%;
   height: 100%;
+}
+
+/* Your CSS */
+.custom-cursor {
+  cursor: pointer;
 }
 
 .d-table-cell {

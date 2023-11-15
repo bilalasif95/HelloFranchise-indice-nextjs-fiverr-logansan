@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/_App/Navbar';
 import baseUrl from '../../utils/baseUrl';
 import Footer from '../../components/_App/Footer';
+import { IndiceContext } from '../../contexts';
+import ClaimModal from '../../components/Listings/ClaimModal';
 import StickyBox from "react-sticky-box";
 
 const SingleListings = ({ user, listing, images }) => {
+  const [claimResponse, setClaimResponse] = useState("");
+
+  const { toggleAuthModal, displayAuthModal } = useContext(IndiceContext);
+  const { toggleClaimModal, displayClaimModal } = useContext(IndiceContext);
+
   return (
     <>
-      <Navbar 
-        userRole={user} 
+      <Navbar
+        userRole={user}
       />
-
+      <div
+        className={
+          displayAuthModal || displayClaimModal
+            ? 'body_overlay open'
+            : 'body_overlay'
+        }
+      ></div>
       <section className='listings-details-area pb-70'>
         <div className='listings-details-image'>
-          <img src='/images/listings-details.jpg' alt='image' />
+          <img src='/images/listings-details.jpg' alt='image' style={{width:"100%"}} />
 
           <div className='container'>
             <div className='container'>
@@ -26,7 +39,7 @@ const SingleListings = ({ user, listing, images }) => {
 
                 <h3>{listing.listingTitle}</h3>
 
-                <h2>${listing.pricing}</h2>
+
 
                 <ul className='d-flex align-items-center'>
                   <li className='phone-number'>
@@ -36,10 +49,11 @@ const SingleListings = ({ user, listing, images }) => {
                   </li>
 
                   <li className='time'>
-                    <i className='bx bx-time-five'></i>
-                    <span>Currently Open</span>
-                    {listing.openingTime} - {listing.closingTime}
-                  </li>
+  <i className='bx bx-dollar-circle'></i>
+  <span>Required Capital</span>
+  ${listing.pricing}
+</li>
+
 
                   <li className='location'>
                     <i className='bx bx-map'></i>
@@ -51,16 +65,16 @@ const SingleListings = ({ user, listing, images }) => {
             </div>
           </div>
         </div>
- 
+
         <div className='container'>
           <div className='row'>
             <div className='col-lg-8 col-md-12'>
               <div className='listings-details-desc'>
-                <div 
+                <div
                   className='listings_details_content'
-                  dangerouslySetInnerHTML={{ __html: listing.description}} 
+                  dangerouslySetInnerHTML={{ __html: listing.description}}
                 />
-   
+
                 <div id='review'>
                   <div className='listings-review-comments'>
                     <div className='user-review'>
@@ -565,10 +579,34 @@ const SingleListings = ({ user, listing, images }) => {
                     <a href='#' className='default-btn'>
                       Book Now
                     </a>
+                    {
+                      listing.isAdminOwner && claimResponse == "" ? <><span></span> <a
+                      data-toggle='modal'
+                      href='#'
+                      className={'default-btn'}
+                      onClick={
+                        user?.role &&
+                        user?.role &&
+                        (user?.role === 'user' || user.role === 'admin')
+                          ? toggleClaimModal
+                          : toggleAuthModal
+                      }
+                    >
+                      Claim Your Listing
+                    </a></> : <></>
+                    }
+
                     <span>
                       By <a href='#'>Booking.com</a>
                     </span>
                   </div>
+
+                  {/* <div className='listings-widget book_listings'>
+                    <h3>Claim Your Listing</h3>
+                    <a href='#' className='default-btn'>
+                      Claim
+                    </a>
+                  </div> */}
 
                   <div className='listings-widget listings_contact_details'>
                     <h3>Contact Details</h3>
@@ -587,7 +625,7 @@ const SingleListings = ({ user, listing, images }) => {
                         <i className='bx bx-globe'></i>
                         <a href={`${listing.website}`}>{listing.website}</a>
                       </li>
-                      
+
                       <li>
                         <i className='bx bx-map'></i> {listing.address}
                       </li>
@@ -599,9 +637,9 @@ const SingleListings = ({ user, listing, images }) => {
                     <ul>
                       <li>
                         <i className='bx bxl-facebook'></i>
-                        <a 
-                          href={`${listing.facebook}`} 
-                          target="_blank" 
+                        <a
+                          href={`${listing.facebook}`}
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.facebook}
@@ -610,9 +648,9 @@ const SingleListings = ({ user, listing, images }) => {
 
                       <li>
                         <i className='bx bxl-twitter'></i>
-                        <a 
+                        <a
                           href={`${listing.twitter}`}
-                          target="_blank" 
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.twitter}
@@ -621,9 +659,9 @@ const SingleListings = ({ user, listing, images }) => {
 
                       <li>
                         <i className='bx bxl-linkedin'></i>
-                        <a 
+                        <a
                           href={`${listing.linkedin}`}
-                          target="_blank" 
+                          target="_blank"
                           rel="noreferrer"
                         >
                           {listing.linkedin}
@@ -638,9 +676,10 @@ const SingleListings = ({ user, listing, images }) => {
         </div>
       </section>
 
-      <Footer 
-        bgColor='bg-f5f5f5' 
+      <Footer
+        bgColor='bg-f5f5f5'
       />
+      <ClaimModal user={user} list={listing} claimResponse={claimResponse}  setClaimResponse={setClaimResponse}/>
     </>
   );
 };

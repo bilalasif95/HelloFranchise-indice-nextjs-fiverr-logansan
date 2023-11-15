@@ -40,8 +40,9 @@ const Navbar = ({ userRole }) => {
   const toggleMenu = () => {
     setshowMenu(!showMenu);
   };
-
+  let language = null;
   useEffect(() => {
+    language=localStorage.getItem("wglang");
     let abortController = new AbortController();
 
     return () => {
@@ -51,6 +52,9 @@ const Navbar = ({ userRole }) => {
 
   // navbar search
   const router = useRouter();
+
+
+
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -86,7 +90,7 @@ const Navbar = ({ userRole }) => {
                 )}
               </div>
               <div className='logo'>
-                <Link href='/'>
+                <Link href='/' locale="nl">
                   <a>
                     <img src='/images/logo.png' alt='logo' />
                   </a>
@@ -109,8 +113,13 @@ const Navbar = ({ userRole }) => {
                   className='navbar-search-box search-box-one'
                   onSubmit={handleSearch}
                 >
-                  <label>
-                    <i className='flaticon-search'></i>
+                  <label onClick={
+                    handleSearch
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
                   </label>
                   <input
                     type='text'
@@ -139,7 +148,7 @@ const Navbar = ({ userRole }) => {
                       <a className='nav-link'>{t('About Us')}</a>
                     </Link>
                   </li>
-   
+
                   {/*<li className='nav-item'>
                     <a href='#' className='dropdown-toggle nav-link'>
                       Pages

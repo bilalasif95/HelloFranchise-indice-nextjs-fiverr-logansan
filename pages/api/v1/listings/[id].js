@@ -21,8 +21,16 @@ export default async (req, res) => {
 const getListing = async (req, res) => {
   try {
     const listing = await Listing.findByPk(req.query.id);
-    res.json(listing);
+    let user
+    if(listing){
+      user = await User.findOne({
+        where: { id: listing.userId },
+      });
+    }
+
+    res.json({...JSON.parse(JSON.stringify(listing)), isAdminOwner: user?.role == 'admin' ? true : false });
   } catch (error) {
+    console.log(error);
     res.status(500).send('Error in gettng single Listing, please try again!');
   }
 };

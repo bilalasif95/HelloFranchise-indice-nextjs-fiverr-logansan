@@ -13,7 +13,7 @@ module.exports = {
 		JWT_SECRET: 'adfjdsjfsdjfkladjfkj',
 	},
 	i18n: {
-		defaultLocale: "en",
+		defaultLocale: "nl",
 		locales: ["en", "nl"],
 		localeDetection: false,
 	},

@@ -31,8 +31,8 @@ import nl from "../public/locales/nl/common.json";
 i18n
   .use(initReactI18next)
   .init({
-    lng: 'en', // default language
-    fallbackLng: 'en', // fallback language
+    lng: 'nl',
+    fallbackLng: 'nl',
     resources: {
       en: {
         translation: en
@@ -45,7 +45,7 @@ i18n
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
- 
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
   }, []);
@@ -59,9 +59,9 @@ function MyApp({ Component, pageProps }) {
 
           <Loader loading={loading} />
 
-          <GoTop 
-            scrollStepInPx='100' 
-            delayInMs='10.50' 
+          <GoTop
+            scrollStepInPx='100'
+            delayInMs='10.50'
           />
 
         </IndiceProvider>

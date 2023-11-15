@@ -38,96 +38,107 @@ const Banner = () => {
 					  <SwiperSlide>
 						Launch Your New Business With A <span className="color-0ec6c6">Hotel Franchise</span>
 					  </SwiperSlide>
-	
+
 					  <SwiperSlide>
 					  Launch Your New Business With A <span className="color-0ec6c6">Restaurant Franchise</span>
 					  </SwiperSlide>
-	
+
 					  <SwiperSlide>
 					  Launch Your New Business With A <span className="color-0ec6c6">Business Franchise</span>
 					  </SwiperSlide>
-	
+
 					  <SwiperSlide>
 					  Launch Your New Business With A <span className="color-0ec6c6">Fitness Franchise</span>
 					  </SwiperSlide>
-					  
+
 					  <SwiperSlide>
 					  Launch Your New Business With A <span className="color-0ec6c6">Other Franchise</span>
 					  </SwiperSlide>
 					</Swiper>
 				  </h1>
 				</div>
-	
+
 				<p>Find a proven business model that offers the support you need to reach your goals</p>
-	
-				<form>
-				  <div className="row m-0 align-items-center">
-					<div className="col-lg-4 col-md-12 p-0">
-					  <div className="form-group">
-						<label>
-						  <i className="flaticon-search"></i>
-						</label>
-						<input
-						  type="text"
-						  className="form-control"
-						  placeholder="What are you looking for?"
-						/>
-					  </div>
-					</div>
-	
-					<div className="col-lg-3 col-md-6 p-0">
-					  <div className="form-group">
-						<label>
-						  <i className="flaticon-pin"></i>
-						</label>
-						<input
-						  type="text"
-						  className="form-control"
-						  placeholder="Location"
-						/>
-					  </div>
-					</div>
-	
-					<div className="col-lg-3 col-md-6 p-0">
-					  <div className="form-group category-select">
-						<label className="category-icon">
-						  <i className="flaticon-category"></i>
-						</label>
-						<select className="banner-form-select">
-							<option>All Categories</option>
-							<option>Automotive Franchises</option>
-							<option>Business &amp; Professional</option>
-							<option>Business Opportunities</option>
-							<option>Children's Franchises</option>
-							<option>Cleaning Franchises</option>
-							<option>Computer &amp; Internet</option>
-							<option>Education Franchises</option>
-							<option>Fast Food Franchises</option>
-							<option>Fitness Franchises</option>
-							<option>Food Franchises</option>
-							<option>Franchise Service Providers</option>
-							<option>Health &amp; Beauty</option>
-							<option>Health Care Franchises</option>
-							<option>Home Based Franchises</option>
-							<option>Home Services Franchises</option>
-							<option>Online Franchises</option>
-							<option>Pet Franchises</option>
-							<option>Property &amp; Real Estate</option>
-							<option>Restaurant Franchises</option>
-							<option>Retail Franchises</option>
-							<option>Travel &amp; Leisure</option>
-						</select>
-					  </div>
-					</div>
-	
-					<div className="col-lg-2 col-md-12 p-0">
-					  <div className="submit-btn">
-						<button type="submit">Search Now</button>
-					  </div>
-					</div>
-				  </div>
-				</form>
-	
+        <form onSubmit={submitHandler}>
+            <div className='row m-0 align-items-center'>
+              <div className='col-lg-4 col-md-12 p-0'>
+                <div className='form-group'>
+                <label onClick={
+                    submitHandler
+                  }
+                  >
+
+<i className='flaticon-search custom-cursor'></i>
+
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='What are you looking for?'
+                    name='title'
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className='col-lg-3 col-md-6 p-0'>
+                <div className='form-group'>
+                  <label>
+                    <i className='flaticon-pin'></i>
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Location'
+                    name='location'
+                    onChange={(e) => setLocation(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className='col-lg-3 col-md-6 p-0'>
+                <div className='form-group category-select pagebanner-select-custom'>
+                  <label className='category-icon'>
+                    <i className='flaticon-category'></i>
+                  </label>
+                  <select
+                    className='banner-form-select-pagebanner'
+                    onChange={(e) => setCategory(e.target.value)}
+                  >
+                    <option>All Categories</option>
+                    <option>Automotive Franchises</option>
+                    <option>Business &amp; Professional</option>
+                    <option>Business Opportunities</option>
+                    <option>Children's Franchises</option>
+                    <option>Cleaning Franchises</option>
+                    <option>Computer &amp; Internet</option>
+                    <option>Education Franchises</option>
+                    <option>Fast Food Franchises</option>
+                    <option>Fitness Franchises</option>
+                    <option>Food Franchises</option>
+                    <option>Franchise Service Providers</option>
+                    <option>Health &amp; Beauty</option>
+                    <option>Health Care Franchises</option>
+                    <option>Home Based Franchises</option>
+                    <option>Home Services Franchises</option>
+                    <option>Online Franchises</option>
+                    <option>Pet Franchises</option>
+                    <option>Property &amp; Real Estate</option>
+                    <option>Restaurant Franchises</option>
+                    <option>Retail Franchises</option>
+                    <option>Travel &amp; Leisure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className='col-lg-2 col-md-12 p-0'>
+                <div className='submit-btn'>
+                  <button type='submit'>Search Now</button>
+                </div>
+              </div>
+            </div>
+          </form>
 				<ul className="popular-search-list">
 				  <li>Need Help? </li>
 				  <li>
@@ -165,7 +176,7 @@ const Banner = () => {
 			</div>
 		  </div>
 		</>
-	  );	
+	  );
 };
 
 export default Banner;
