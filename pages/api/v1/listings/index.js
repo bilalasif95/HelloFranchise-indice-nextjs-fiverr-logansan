@@ -52,29 +52,6 @@ const createListings = async (req, res) => {
 			process.env.JWT_SECRET
 		);
 
-		if (!isLength(listingTitle, { min: 3 })) {
-			return res
-				.status(422)
-				.send("The title should be a minimum of Three characters long");
-		} else if (!category) {
-			return res.status(422).send("Category required");
-		} else if (!keyword) {
-			return res.status(422).send("keyword required");
-		} else if (!city) {
-			return res.status(422).send("city required");
-		} else if (!address) {
-			return res.status(422).send("address required");
-		} else if (!state) {
-			return res.status(422).send("state required");
-		} else if (!description) {
-			return res.status(422).send("description required");
-		} else if (!openingTime) {
-			return res.status(422).send("openingTime info required");
-		} else if (!closingTime) {
-			return res.status(422).send("closingTime required");
-		} else if (!pricing) {
-			return res.status(422).send("pricing required");
-		}
 
 		await Listing.create({
 			userId,

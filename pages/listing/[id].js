@@ -577,7 +577,12 @@ const SingleListings = ({ user, listing, images }) => {
                   <div className='listings-widget book_listings'>
                     <h3>Booking Online</h3>
                     <a href='#' className='default-btn'>
-                      Book Now
+                      Request Information Package
+                    </a>
+                    <span></span>
+                    <a href='#' className='default-btn'>
+                    <i className='bx bx-map' ></i>
+                      Request Region Check
                     </a>
                     {
                       listing.isAdminOwner && claimResponse == "" ? <><span></span> <a
@@ -597,7 +602,7 @@ const SingleListings = ({ user, listing, images }) => {
                     }
 
                     <span>
-                      By <a href='#'>Booking.com</a>
+                      By <a href='#'>aidirectoy.app</a>
                     </span>
                   </div>
 
