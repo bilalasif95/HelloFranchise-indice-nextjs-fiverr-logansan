@@ -343,7 +343,7 @@ const UpdateListing = ({ show, handleClose, updateList, updatedListings }) => {
 										<div className="form-group">
 											<label>
 												<i className="bx bx-menu-alt-left"></i>{" "}
-												Address:
+												{"Address"}:
 											</label>
 											<input
 												type="text"
@@ -428,7 +428,7 @@ const UpdateListing = ({ show, handleClose, updateList, updatedListings }) => {
 										<div className="form-group">
 											<label>
 												<i className="bx bx-text"></i>{" "}
-												Description:
+												{"Description"}:
 											</label>
 
 											<RichTextEditor
@@ -467,7 +467,7 @@ const UpdateListing = ({ show, handleClose, updateList, updatedListings }) => {
 										<div className="form-group">
 											<label>
 												<i className="bx bx-globe"></i>{" "}
-												Website: <span>(optional)</span>
+												{"Website"}: <span>(optional)</span>
 											</label>
 											<input
 												type="text"
@@ -485,7 +485,7 @@ const UpdateListing = ({ show, handleClose, updateList, updatedListings }) => {
 										<div className="form-group">
 											<label>
 												<i className="bx bx-phone-call"></i>{" "}
-												Phone: <span>(optional)</span>
+												{"Phone"}: <span>(optional)</span>
 											</label>
 											<input
 												type="text"
@@ -650,7 +650,7 @@ const UpdateListing = ({ show, handleClose, updateList, updatedListings }) => {
 								<div className="form-group">
 									<label>
 										<i className="bx bx-purchase-tag"></i>{" "}
-										Pricing:
+										{"Pricing"}:
 									</label>
 									<input
 										type="number"

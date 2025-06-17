@@ -251,8 +251,7 @@ const SingleListings = ({ user, listing, images }) => {
                   <div className='review-form-wrapper'>
                     <h3>Add A Review</h3>
                     <p className='comment-notes'>
-                      Your email address will not be published. Required fields
-                      are marked <span>*</span>
+                      {"Your email address will not be published."} {"Required fields are marked"} <span>*</span>
                     </p>
 
                     <form>
@@ -526,7 +525,7 @@ const SingleListings = ({ user, listing, images }) => {
                             <input
                               type='text'
                               className='form-control'
-                              placeholder='Name *'
+                              placeholder={`${"Name"} *`}
                             />
                           </div>
                         </div>
@@ -536,7 +535,7 @@ const SingleListings = ({ user, listing, images }) => {
                             <input
                               type='email'
                               className='form-control'
-                              placeholder='Email *'
+                              placeholder={`${"Email"} *`}
                             />
                           </div>
                         </div>

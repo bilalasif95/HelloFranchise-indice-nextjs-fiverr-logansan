@@ -85,7 +85,7 @@ const Bookings = ({user}) => {
 										<ul>
 											<li>
 												<i className="bx bx-map"></i>
-												<span>Address:</span>
+												<span>{"Address"}:</span>
 												40 Journal Square, NG USA
 											</li>
 											<li>
@@ -169,7 +169,7 @@ const Bookings = ({user}) => {
 										<ul>
 											<li>
 												<i className="bx bx-map"></i>
-												<span>Address:</span>
+												<span>{"Address"}:</span>
 												55 County Laois, Ireland
 											</li>
 											<li>
@@ -245,7 +245,7 @@ const Bookings = ({user}) => {
 										<ul>
 											<li>
 												<i className="bx bx-map"></i>
-												<span>Address:</span>
+												<span>{"Address"}:</span>
 												Tilt Tilbury, United Kingdom
 											</li>
 											<li>
@@ -328,7 +328,7 @@ const Bookings = ({user}) => {
 										<ul>
 											<li>
 												<i className="bx bx-map"></i>
-												<span>Address:</span>
+												<span>{"Address"}:</span>
 												40 Journal Square, NG USA
 											</li>
 											<li>

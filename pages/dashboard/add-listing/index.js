@@ -284,7 +284,7 @@ const AddListing = ({ user }) => {
               <div className='col-lg-6 col-md-6'>
                 <div className='form-group'>
                   <label>
-                    <i className='bx bx-menu-alt-left'></i> Address:
+                    <i className='bx bx-menu-alt-left'></i> {"Address"}:
                   </label>
                   <input
                     type='text'
@@ -300,7 +300,7 @@ const AddListing = ({ user }) => {
               <div className='col-lg-6 col-md-6'>
                 <div className='form-group'>
                   <label>
-                    <i className='bx bx-menu-alt-left'></i> City:
+                    <i className='bx bx-menu-alt-left'></i> {"City"}:
                   </label>
                   <select
                     className='dashbaord-category-select'
@@ -371,7 +371,7 @@ const AddListing = ({ user }) => {
               <div className='col-lg-12 col-md-12'>
                 <div className='form-group'>
                   <label>
-                    <i className='bx bx-text'></i> Description:
+                    <i className='bx bx-text'></i> {"Description"}:
                   </label>
 
                   <RichTextEditor
@@ -406,7 +406,7 @@ const AddListing = ({ user }) => {
               <div className='col-lg-4 col-md-6'>
                 <div className='form-group'>
                   <label>
-                    <i className='bx bx-globe'></i> Website:{' '}
+                    <i className='bx bx-globe'></i> {"Website"}:{' '}
                     <span>(optional)</span>
                   </label>
                   <input
@@ -422,7 +422,7 @@ const AddListing = ({ user }) => {
               <div className='col-lg-4 col-md-6'>
                 <div className='form-group'>
                   <label>
-                    <i className='bx bx-phone-call'></i> Phone:{' '}
+                    <i className='bx bx-phone-call'></i> {"Phone"}:{' '}
                     <span>(optional)</span>
                   </label>
                   <input
@@ -567,7 +567,7 @@ const AddListing = ({ user }) => {
 
             <div className='form-group'>
               <label>
-                <i className='bx bx-purchase-tag'></i> Pricing:
+                <i className='bx bx-purchase-tag'></i> {"Pricing"}:
               </label>
               <input
                 type='number'
